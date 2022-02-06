@@ -1,6 +1,6 @@
 {
 	"name": "bsn-js",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Generator/validator for (Dutch) BSNs",
 	"repository": "https://github.com/willemverbuyst/bsn-js",
 	"author": "Willem Verbuyst",
