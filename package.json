@@ -29,7 +29,13 @@
 		"size": "size-limit",
 		"test": "jest",
 		"build": "tsc -p tsconfig.json",
-		"docs": "typedoc --entryPoints src/index.ts"
+		"clean": "rm -rf lib build",
+		"docs": "typedoc --entryPoints src/index.ts",
+		"prepare": "npm run clean && npm run build",
+		"prepublishOnly": "npm test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run format && git add -A src",
+		"postversion": "git push && git push --tags"
 	},
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "^7.0.8",

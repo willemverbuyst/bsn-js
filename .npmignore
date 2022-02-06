@@ -1,0 +1,10 @@
+.github
+node_modules
+build
+tmp
+docs
+coverage
+*.log
+yarn.lock
+package-lock.json
+

@@ -1,0 +1,23 @@
+name: publish-to-npm
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-to-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
+      - name: Set up environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: npm install
+      - name: publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
