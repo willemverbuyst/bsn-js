@@ -29,7 +29,7 @@
 		"size": "size-limit",
 		"test": "jest",
 		"build": "tsc -p tsconfig.json",
-		"clean": "rm -rf lib build",
+		"clean": "rm -rf ./lib",
 		"docs": "typedoc --entryPoints src/index.ts",
 		"prepare": "npm run clean && npm run build",
 		"prepublishOnly": "npm test && npm run lint",
