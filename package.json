@@ -17,8 +17,17 @@
 	],
 	"main": "./lib/index.js",
 	"types": "./lib/index.d.ts",
+	"size-limit": [
+		{
+			"path": "./lib/index.js"
+		}
+	],
 	"scripts": {
-		"start": "ts-node ./src/index.ts"
+		"start": "ts-node ./src/index.ts",
+		"format": "prettier --write \"src/**/*.ts\"",
+		"lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+		"size": "size-limit",
+		"build": "tsc -p tsconfig.json"
 	},
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "^7.0.8",
