@@ -28,7 +28,8 @@
 		"lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
 		"size": "size-limit",
 		"test": "jest",
-		"build": "tsc -p tsconfig.json"
+		"build": "tsc -p tsconfig.json",
+		"docs": "typedoc --entryPoints src/index.ts"
 	},
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "^7.0.8",

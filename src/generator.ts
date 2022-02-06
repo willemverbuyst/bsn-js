@@ -7,6 +7,13 @@ interface BSN {
 	i8: number
 }
 
+/**
+ * The generateBSN function returns a valid BSN
+ *
+ * @param withLeadingZeroes if true the bsn starts with 9999 (default), if false the bsn starts with 0000
+ * @returns a valid BSN of 9 characters
+ */
+
 export const generateBSN = (withLeadingZeroes?: boolean): string => {
 	const bsn: BSN = {
 		leading: '9999',
