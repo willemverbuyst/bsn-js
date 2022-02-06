@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"lib": ["ES5", "DOM"],
+		"outDir": "lib",
+		"removeComments": true,
+		"baseUrl": "./",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"paths": {},
+		"sourceMap": true,
+		"sourceRoot": "/",
+		"declaration": true,
+		"alwaysStrict": true,
+		"allowUnreachableCode": false,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitReturns": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"types": ["node", "jest"]
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "**/*.test.ts"]
+}
