@@ -5,6 +5,8 @@
 
 bsn-js can be used to generate a test BSN (burger service nummer) or validate an existing BSN
 
+works for JavaScript and TypeScript (type definitions included)
+
 ## installation
 
 `npm install bsn-js`
@@ -27,7 +29,7 @@ or
 
 pass the BSN (string) to the function and it will return `true` or `false`
 
-example: `const validBSN = isValidBSN('12312312')` <span style="color:grey"># false</span>
+example: `const validBSN = isValidBSN('12312312') # false`
 
 <br>
 
@@ -45,16 +47,16 @@ the Dutch authority has reserved BSNs starting with 0000 and 99999 for testing
 
 the generetated BSN will start with 99999 by default
 
-`const bsn = generateBSN()` <span style="color:grey"># 999999400</span>
+`const bsn = generateBSN() # 999999400`
 
 when the function generateBSN is given true as argument, it will return a BSN starting with 0000
 
-`const bsn = generateBSN(true)` <span style="color:grey"># 000078840</span>
+`const bsn = generateBSN(true) # 000078840`
 
 <br>
 
 ## information BSN
 
-[offical docs](https://www.government.nl/topics/personal-data/citizen-service-number-bsn)
+[official docs](https://www.government.nl/topics/personal-data/citizen-service-number-bsn)
 
 [11 check](https://en.wikipedia.org/wiki/Check_digit)
