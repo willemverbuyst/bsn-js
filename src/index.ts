@@ -1,1 +1,2 @@
-console.log('Hello world!')
+export * from './generator'
+export * from './validator'

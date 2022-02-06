@@ -7,7 +7,7 @@ interface BSN {
 	i8: number
 }
 
-export const generateBSN = (withLeadingZeroes = false): string => {
+export const generateBSN = (withLeadingZeroes?: boolean): string => {
 	const bsn: BSN = {
 		leading: '9999',
 		i4: Math.floor(Math.random() * 10),
