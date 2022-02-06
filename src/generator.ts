@@ -10,14 +10,14 @@ interface BSN {
 /**
  * The generateBSN function returns a valid BSN
  *
- * @param withLeadingZeroes if true the bsn starts with 9999 (default), if false the bsn starts with 0000
+ * @param withLeadingZeroes if true the bsn starts with 99999 (default), if false the bsn starts with 0000
  * @returns a valid BSN of 9 characters
  */
 
 export const generateBSN = (withLeadingZeroes?: boolean): string => {
 	const bsn: BSN = {
 		leading: '9999',
-		i4: Math.floor(Math.random() * 10),
+		i4: 9,
 		i5: Math.floor(Math.random() * 10),
 		i6: Math.floor(Math.random() * 10),
 		i7: Math.floor(Math.random() * 10),
