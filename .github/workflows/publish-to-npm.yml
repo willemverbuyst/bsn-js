@@ -8,13 +8,6 @@ jobs:
   publish-to-npm:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v1
-      - name: Set up environment
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org/
       - name: Install dependencies
         run: npm install
       - name: publish
