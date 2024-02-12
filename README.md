@@ -1,5 +1,5 @@
 [![lint-test-build](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml)
-[![pages-build-deployment](https://github.com/willemverbuyst/bsn-js/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/pages/pages-build-deployment)
+[![publish-to-npm](https://github.com/willemverbuyst/bsn-js/actions/workflows/publish-to-npm/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/publish-to-npm)
 
 # bsn-js
 
@@ -9,11 +9,11 @@ works for JavaScript and TypeScript (type definitions included)
 
 ## installation
 
-`npm install bsn-js`
+> npm install bsn-js
 
 or using yarn
 
-`yarn add bsn-js`
+> yarn add bsn-js
 
 <br>
 
@@ -60,3 +60,5 @@ when the function generateBSN is given true as argument, it will return a BSN st
 [official docs](https://www.government.nl/topics/personal-data/citizen-service-number-bsn)
 
 [11 check](https://en.wikipedia.org/wiki/Check_digit)
+
+[bsn-tool](https://github.com/willemverbuyst/bsn-tool)
