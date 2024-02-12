@@ -1,5 +1,4 @@
 [![lint-test-build](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml)
-[![publish-to-npm](https://github.com/willemverbuyst/bsn-js/actions/workflows/publish-to-npm/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/publish-to-npm)
 
 # bsn-js
 
