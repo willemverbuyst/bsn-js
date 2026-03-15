@@ -14,7 +14,7 @@
           "technical-change": "patch",
           "dependencies": "patch",
           "tests": "patch",
-          "docs": "patch"
+          "documentation": "patch"
         }
       }
     ],
