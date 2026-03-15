@@ -1,9 +1,3 @@
-/**
- * The isValidBSN function takes a string (of numbers)
- *
- * @param bsn the BSN to be validated
- * @returns true if it is a valid BSN else false
- */
 export const isValidBSN = (bsn: string): boolean => {
 	if (bsn.length < 8 || bsn.length > 9) {
 		return false
