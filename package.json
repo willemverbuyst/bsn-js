@@ -21,6 +21,7 @@
     "start": "ts-node ./src/index.ts",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
+		"knip:check": "knip",
     "lint:check": "oxlint",
     "lint:fix": "oxlint --fix",
     "size:check": "size-limit",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.0.2",
     "@types/node": "^20.11.17",
+    "knip": "^5.86.0",
     "oxfmt": "^0.40.0",
     "oxlint": "^1.55.0",
     "size-limit": "^11.0.2",
