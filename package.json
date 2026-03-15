@@ -27,7 +27,7 @@
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
 		"size": "size-limit",
-		"test": "jest",
+		"test:unit": "jest",
 		"build": "tsc -p tsconfig.json",
 		"clean": "rm -rf ./lib",
 		"prepare": "npm run clean && npm run build",
