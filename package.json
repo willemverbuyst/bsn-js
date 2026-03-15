@@ -25,6 +25,7 @@
     "lint:fix": "oxlint --fix",
     "size:check": "size-limit",
     "test:unit": "vitest run",
+    "type:check": "tsc --noEmit",
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./lib",
     "prepare": "npm run clean && npm run build",
@@ -40,7 +41,7 @@
     "oxlint": "^1.55.0",
     "size-limit": "^11.0.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
+    "typescript": "^5.9.3",
     "vitest": "^2.1.0"
   },
   "size-limit": [
