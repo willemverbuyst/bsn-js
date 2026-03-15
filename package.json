@@ -27,12 +27,7 @@
     "test:unit": "vitest run",
     "type:check": "tsc --noEmit",
     "build": "tsc -p tsconfig.json",
-    "clean": "rm -rf ./lib",
-    "prepare": "husky",
-    "prepublishOnly": "npm run test:unit && npm run lint:check",
-    "preversion": "npm run lint:check",
-    "version": "npm run fmt:check && git add -A src",
-    "postversion": "git push && git push --tags"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
