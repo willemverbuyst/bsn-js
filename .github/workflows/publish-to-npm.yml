@@ -1,4 +1,4 @@
-name: publish-to-npm
+name: Publish to npm
 
 on:
   release:
@@ -8,9 +8,18 @@ jobs:
   publish-to-npm:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: ".nvmrc"
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
       - name: publish
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
