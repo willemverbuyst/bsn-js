@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { isValidBSN } from "./validator";
+import { isValidBSN, passesElevenTest } from "./validator";
 
 const validBSNs = [
   "000006944",
@@ -106,6 +106,20 @@ const invalidBSNs = [
   "070009611",
   "070000929",
 ];
+
+describe("#passesElevenTest", () => {
+  test("returns false when digits array is empty", () => {
+    expect(passesElevenTest([])).toBe(false);
+  });
+
+  test("returns true for valid weighted sum (11-proef)", () => {
+    expect(passesElevenTest([0, 0, 0, 0, 0, 6, 9, 4, 4])).toBe(true);
+  });
+
+  test("returns false when weighted sum fails 11-proef", () => {
+    expect(passesElevenTest([0, 0, 0, 0, 0, 0, 0, 0, 1])).toBe(false);
+  });
+});
 
 describe("#isValidBSN", () => {
   test.each(validBSNs)("isValidBSN(%s) returns true", (BSN) => expect(isValidBSN(BSN)).toBe(true));
