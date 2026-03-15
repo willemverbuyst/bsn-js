@@ -17,6 +17,9 @@
   ],
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
@@ -53,8 +56,5 @@
     {
       "path": "./lib/index.js"
     }
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }
