@@ -30,7 +30,6 @@
 		"test": "jest",
 		"build": "tsc -p tsconfig.json",
 		"clean": "rm -rf ./lib",
-		"docs": "typedoc --entryPoints src/index.ts",
 		"prepare": "npm run clean && npm run build",
 		"prepublishOnly": "npm test && npm run lint",
 		"preversion": "npm run lint",
@@ -51,7 +50,6 @@
 		"size-limit": "^11.0.2",
 		"ts-jest": "^29.1.2",
 		"ts-node": "^10.9.2",
-		"typedoc": "^0.25.8",
 		"typescript": "^5.3.3"
 	}
 }
