@@ -29,7 +29,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./lib",
     "prepare": "npm run clean && npm run build",
-    "prepublishOnly": "npm test:unit && npm run lint:check",
+    "prepublishOnly": "npm run test:unit && npm run lint:check",
     "preversion": "npm run lint:check",
     "version": "npm run fmt:check && git add -A src",
     "postversion": "git push && git push --tags"
