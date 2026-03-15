@@ -42,4 +42,4 @@ When the function generateBSN is given true as argument, it will return a BSN st
 
 [11 check](https://en.wikipedia.org/wiki/Check_digit)
 
-[bsn-tool](https://github.com/willemverbuyst/bsn-tool)
+[bsn-tool](https://willemverbuyst.github.io/bsn-tool/)
