@@ -1,3 +1,4 @@
+import { describe, test, expect } from "vitest";
 import { generateBSN } from "./generator";
 import { isValidBSN } from "./validator";
 

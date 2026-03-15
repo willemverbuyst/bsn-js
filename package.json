@@ -24,26 +24,24 @@
     "lint:check": "oxlint",
     "lint:fix": "oxlint --fix",
     "size:check": "size-limit",
-    "test:unit": "jest",
+    "test:unit": "vitest run",
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./lib",
     "prepare": "npm run clean && npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "prepublishOnly": "npm test:unit && npm run lint:check",
+    "preversion": "npm run lint:check",
+    "version": "npm run fmt:check && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.0.2",
-    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.17",
-    "jest": "^29.7.0",
     "oxfmt": "^0.40.0",
     "oxlint": "^1.55.0",
     "size-limit": "^11.0.2",
-    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.0"
   },
   "size-limit": [
     {
