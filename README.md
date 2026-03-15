@@ -1,58 +1,40 @@
-[![lint-test-build](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/lint-test-build.yml)
-
 # bsn-js
 
-bsn-js can be used to generate a test BSN (burger service nummer) or validate an existing BSN
+[![Code Checks](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-checks.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-checks.yml) [![Tests](https://github.com/willemverbuyst/bsn-js/actions/workflows/tests.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/tests.yml) [![CodeQL](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-ql.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-ql.yml)
 
-works for JavaScript and TypeScript (type definitions included)
+## what is this?
+
+The bsn-js package can be used to generate a test BSN (burger service nummer) or to validate an existing BSN.
+
+It works for JavaScript and TypeScript (type definitions included).
 
 ## installation
 
 > npm install bsn-js
 
-or using yarn
-
-> yarn add bsn-js
-
-<br>
-
 ## usage
 
-#### validate existing BSN
+### validate existing BSN
 
 `import { isValidBSN } from 'bsn-js'`
 
-or
+Pass the BSN (string) to the function and it will return `true` or `false`.
 
-`const { isValidBSN } = require('bsn-js')`
+Example: `const validBSN = isValidBSN('12312312') // false`
 
-pass the BSN (string) to the function and it will return `true` or `false`
-
-example: `const validBSN = isValidBSN('12312312') # false`
-
-<br>
-
-#### generate BSN for testing
+### generate BSN for testing
 
 `import { generateBSN } from 'bsn-js'`
 
-or
+The test BSNs will consist of 9 characters. The Dutch authority has reserved BSNs starting with 0000 and 99999 for testing.
 
-`const { generateBSN } = require('bsn-js)`
+The generated BSN will start with 99999 by default.
 
-test BSNs will consist of 9 characters
+`const bsn = generateBSN() // 999999400`
 
-the Dutch authority has reserved BSNs starting with 0000 and 99999 for testing
+When the function generateBSN is given true as argument, it will return a BSN starting with 0000.
 
-the generetated BSN will start with 99999 by default
-
-`const bsn = generateBSN() # 999999400`
-
-when the function generateBSN is given true as argument, it will return a BSN starting with 0000
-
-`const bsn = generateBSN(true) # 000078840`
-
-<br>
+`const bsn = generateBSN(true) // 000078840`
 
 ## information BSN
 
