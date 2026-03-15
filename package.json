@@ -28,6 +28,7 @@
     "lint:fix": "oxlint --fix",
     "size:check": "size-limit",
     "test:unit": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "type:check": "tsc --noEmit",
     "build": "tsc -p tsconfig.json",
     "prepare": "husky"
@@ -43,6 +44,7 @@
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@size-limit/preset-small-lib": "^12.0.1",
     "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.0",
     "husky": "^9.1.7",
     "knip": "^5.86.0",
     "oxfmt": "^0.40.0",
