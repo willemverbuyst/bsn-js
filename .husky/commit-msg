@@ -1,1 +1,2 @@
+npm run fmt:check
 npx --no -- commitlint --edit $1
