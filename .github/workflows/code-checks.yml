@@ -18,6 +18,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clean up
+        run: rm -rf ./lib
+
+      - name: Build
+        run: npm run build
+
       - name: Check size
         run: npm run size:check
 

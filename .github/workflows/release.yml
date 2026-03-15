@@ -27,6 +27,8 @@ jobs:
 
       - run: npm ci
 
+      - run: rm -rf ./lib
+
       - run: npm run build
 
       - run: npx semantic-release
