@@ -1,0 +1,18 @@
+changelog:
+  categories:
+    - title: Fixed
+      labels:
+        - fix
+    - title: Changed
+      labels:
+        - change
+    - title: Added
+      labels:
+        - feature
+        - enhancement
+    - title: Technical changes
+      labels:
+        - technical-change
+        - dependencies
+        - tests
+        - docs

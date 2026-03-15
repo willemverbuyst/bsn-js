@@ -1,2 +1,2 @@
-export * from './generator'
-export * from './validator'
+export * from "./generator";
+export * from "./validator";
