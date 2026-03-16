@@ -5,6 +5,12 @@ tmp
 docs
 coverage
 *.log
-yarn.lock
+.husky
+.releaserc.json
+.commitlintrc.json
+knip.json
+vitest.config.ts
+tsconfig.json
+src
 package-lock.json
 
