@@ -36,7 +36,10 @@ jobs:
       - name: Run tests
         run: npm run test:unit
 
-      - name: Create release
-        run: npx semantic-release
+      - name: Create semantic release
+        # https://github.com/cycjimmy/semantic-release-action
+        uses: cycjimmy/semantic-release-action@v6
+        with:
+          branch: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
