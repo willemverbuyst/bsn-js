@@ -1,19 +1,23 @@
+/** Sum of digit[i] * weight[i], minus check digit, must be divisible by 11 (Dutch 11-proef). */
+export const passesElevenTest = (digits: number[]): boolean => {
+  const checkDigit = digits.at(-1);
+  if (checkDigit === undefined) return false;
+  const weightedSum = digits
+    .slice(0, -1)
+    .reduce((acc, digit, i, arr) => digit * (arr.length + 1 - i) + acc, 0);
+  return (weightedSum - checkDigit) % 11 === 0;
+};
+
 export const isValidBSN = (bsn: string): boolean => {
   if (bsn.length < 8 || bsn.length > 9) {
     return false;
   }
 
-  const numbers = Array.from(String(bsn), Number);
-  const lastNumber = numbers[numbers.length - 1];
+  const digits = Array.from(bsn, Number);
 
-  if (typeof lastNumber === "number" && !numbers.includes(NaN)) {
-    return (
-      (numbers.slice(0, -1).reduce((a, b, i, arr) => b * (arr.length + 1 - i) + a, 0) -
-        lastNumber) %
-        11 ===
-      0
-    );
+  if (digits.includes(NaN)) {
+    return false;
   }
 
-  return false;
+  return passesElevenTest(digits);
 };
