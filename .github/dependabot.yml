@@ -7,6 +7,9 @@ updates:
       time: "02:00"
       day: "sunday"
     open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps): "
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -14,3 +17,5 @@ updates:
       time: "02:00"
       day: "sunday"
     open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps): "
