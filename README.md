@@ -2,19 +2,17 @@
 
 [![Code Checks](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-checks.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-checks.yml) [![Tests](https://github.com/willemverbuyst/bsn-js/actions/workflows/tests.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/tests.yml) [![CodeQL](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-ql.yml/badge.svg)](https://github.com/willemverbuyst/bsn-js/actions/workflows/code-ql.yml)
 
-## what is this?
+## What is this?
 
 The bsn-js package can be used to generate a test BSN (burger service nummer) or to validate an existing BSN.
 
-It works for JavaScript and TypeScript (type definitions included).
-
-## installation
+## Installation
 
 > npm install bsn-js
 
 ## usage
 
-### validate existing BSN
+### Validate an existing BSN
 
 `import { isValidBSN } from 'bsn-js'`
 
@@ -22,7 +20,7 @@ Pass the BSN (string) to the function and it will return `true` or `false`.
 
 Example: `const validBSN = isValidBSN('12312312') // false`
 
-### generate BSN for testing
+### Generate a BSN for testing
 
 `import { generateBSN } from 'bsn-js'`
 
@@ -36,7 +34,7 @@ When the function generateBSN is given true as argument, it will return a BSN st
 
 `const bsn = generateBSN(true) // 000078840`
 
-## information BSN
+## Information on BSN
 
 [official docs](https://www.government.nl/topics/personal-data/citizen-service-number-bsn)
 
